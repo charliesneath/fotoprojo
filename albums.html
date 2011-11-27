@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+		<link type="text/css" rel="stylesheet" href="/stylesheets/albums.css" />
+		<meta name="google-site-verification" content="e7pv-6FRoJZEw2GipmzayJtBtcBDOrxI2KX4sDE3RcY" />
+		<title>fotoprojo</title>
+		{% block verify %}{% endblock %}
+		{% block google_analytics %}{% endblock %}
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id='albums_header'>home > your albums</div>
+			<div class="clearboth"></div>
+		</div>
+		<div id="albums">
+		{% for year in albums %}
+			{% for year_label, months in year.items %}
+				<div class="album_year">{{ year_label }}</div>
+				{% for month in months %}
+					{% for month_label, albums in month.items %}
+						<div class="album_month">{{ month_label }}</div>
+						{% for album in albums %}
+							<div class="album">
+								<div class="album_title"><a href="{{ album.link }}">{{ album.title }}</a></div>
+								<div class="album_details">
+									{{ album.display_date }}{% if album.location %}&nbsp;/&nbsp;{{ album.location }}{% endif %}
+								</div>
+						 	</div>
+						{% endfor %}
+					{% endfor %}
+				{% endfor %}
+			{% endfor %}
+		{% endfor%}
+		</div>
+		<a class="logout" href="http://fotoprojo.appspot.com/logout">Log out</a>
+	</body>
+</html>

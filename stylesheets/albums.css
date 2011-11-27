@@ -1,0 +1,54 @@
+#albums_header {
+    float:left;
+}
+
+#twitter_info {
+    float:right;
+}
+
+#twitter_info a:link {
+    color: #666666;
+}
+
+#twitter_info a:visited {
+    color: #666666;
+}
+
+#albums_header {
+    font-size:24px;
+    color: #666666;
+}
+
+.album_year {
+    border-top: 1px solid #666666;
+    padding: 4px 0 0 0;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.album_month {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 7px 0;
+}
+
+.album_title {
+    font-size: 24px;
+}
+
+.album_title a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.album_title a:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+
+.album_details {
+    font-size: 14;
+    color: #666666;
+    margin: 0 0 10px 0;
+}

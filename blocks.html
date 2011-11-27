@@ -1,0 +1,36 @@
+{% extends "albums.html" %}
+
+{% block verify %}
+<meta name="google-site-verification" content="e7pv-6FRoJZEw2GipmzayJtBtcBDOrxI2KX4sDE3RcY" />
+{% endblock verify %}
+
+{% block google_analytics %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22912563-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+{% endblock google_analytics %}
+
+{% block lightbox %}
+	<div id="lightboxWrapper">
+		<div id="lightbox">
+			<div id="image">
+				<img width="500" src="pic.jpg"/>
+			</div>
+			<div id="comment">"Please! PLEASE! I even bought you this exquisite bouquet!"</div>
+			<div id="timestamp">September 4, 2010 @ 4:13PM - Bayhead, NJ</div>
+			<div class="sharedUsers">
+				<a class="username">@zeedog &times;</a>
+				<input type="text"></input>
+			</div>
+			<div id="shareButton"><a>@</a></div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+		<link type="text/css" rel="stylesheet" href="/stylesheets/photos.css" />
+		{% block verify %}{% endblock %}
+		{% block google_analytics %}{% endblock %}
+		<title>fotoprojo</title>
+	</head>
+	<body>
+		<div id="header">
+			<div id='albums_header'>
+				home > <a class="home_link" href="/">your albums</a>&nbsp;>&nbsp;{{album.month}}&nbsp;{{album.year}}
+			</div>
+			<div class="clearboth"></div>
+		</div>
+		<div class="divider"></div>
+		<div id="album_title">{{ album.title }}</div>
+		<div id="album_description">{{ album.description }}</div>
+		<div id="album_details">
+			{{ album.display_date }}
+			{% if album.location %}&nbsp;/&nbsp;{{ album.location }}{% endif %}
+			{% if album.tags %}
+				&nbsp;/&nbsp;&nbsp;<img height="12" src="/images/tag.png">&nbsp;
+				{% for tag in album.tags %}
+					{{ tag }}{% if not forloop.last %},{% endif %}
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div id="photos">
+		{% if photos = ''%}
+			There aren't any photos in this album.
+		{% else %}
+			{% for photo in photos %}
+				<div class="photo">
+					<a href="{{photo.link}}"><img height="124" src="{{ photo.thumbnail }}" /></a>
+				</div>
+			{% endfor %}
+		{% endif %}
+		</div>
+		<a class="logout" href="http://fotoprojo.appspot.com/logout">Log out</a>
+	</body>
+</html>

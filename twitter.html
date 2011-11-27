@@ -1,0 +1,7 @@
+<div id="twitter_info">
+	{% if twitter['screen_name'] %}
+		what's up, @{{ twitter['screen_name'] }}
+	{% else %}
+		<a href='http://fotoprojo.appspot.com/authorize_twitter'>twitter login to share</a>
+	{% endif %}
+</div>

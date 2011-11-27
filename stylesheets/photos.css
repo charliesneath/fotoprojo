@@ -1,0 +1,31 @@
+.divider {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #666666;
+}
+
+#album_title {
+    padding: 4px 0 0 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#album_description {
+    font-size: 24px;
+    margin: 0 0 7px 0;
+}
+
+#album_details {
+    font-size: 14;
+    color: #666666;
+    margin: 0 0 10px 0;
+}
+
+.photo {
+    display: inline;
+    
+}
+
+a.home_link {
+    color: #666666;
+    text-decoration:none;
+}

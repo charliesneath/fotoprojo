@@ -1,0 +1,64 @@
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 20px 20px 20px 20px;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+/*used to clear after floated elements*/
+.clearboth {
+   clear: both;
+}
+
+#header {
+    font-size: 24px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.divider {
+    margin-bottom: 10px;
+}
+
+#albums_header {
+    float:left;
+}
+
+#twitter_info {
+    float:right;
+}
+
+#twitter_info a:link {
+    color: #666666;
+}
+
+#twitter_info a:visited {
+    color: #666666;
+}
+
+#albums_header {
+    font-size:24px;
+    color: #666666;
+}
+
+a.logout {
+    color:#666666;
+}
+
+a.logout:visited {
+    color:#666666;
+}

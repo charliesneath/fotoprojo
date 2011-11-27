@@ -1,0 +1,38 @@
+{% for month, albums in months.items %}
+	<div class="month_year">{{ month }}</div>
+	{% for album in albums %}
+		<div class="album">
+			<div class="album_title">{{ album.title }}</div>
+			<div class="album_details">
+				{{ album.timestamp }}{% if album.location %},&nbsp;{{ album.location }}{% endif %}
+			</div>
+	 	</div>
+	{% endfor %}
+{% endfor %}
+
+<!-- {% for year, months in albums %} -->
+	<!-- <div class="album_year">{{ year }}</div> -->
+<!-- {% endfor %} -->
+
+albums 01 - 2010[]
+	   02
+	   03
+	   04
+
+# create ordered list of months
+for year, months in albums.iteritems():
+	sorted_month_keys = sorted(months.keys(), reverse = true)
+	sorted_month_list = []
+	for month_key in sorted_month_keys:
+		sorted_month_list.append(albums[year][month_key])
+	# set the year to this list
+	albums[year] = sorted_month_list
+	
+# create ordered list of years
+sorted_year_keys = sorted(albums.keys(), reverse = true)
+for year_key in sorted_year_keys:
+	sorted_years_list = []
+	sorted_years_list.append(albums[year_key])
+
+# set the albums array to the newly sorted array
+albums = sorted_years_list
